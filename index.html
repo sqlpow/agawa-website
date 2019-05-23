@@ -1,20 +1,105 @@
 ﻿<!DOCTYPE html>
-
 <html>
-
+<title>Pensjonat Agawa</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pensjonat Agawa</title>
     <style>
-        body {
-            background-image: url("statek.jpg");
-            background-repeat: no-repeat;
-            background-size: 100%;
+        html{
+            -ms-text-size-adjust: 100%;
+            -webkit-text-size-adjust: 100%;
+          
+        }
+        body{
+            font-family: "Segoe UI",Arial,sans-serif;
+            margin: 0;
+
+        }
+        .top-bar {
+            background-color: white;
+            display: block;
+            color: white;
+            overflow: hidden;
+            box-shadow: 10px 10px 5px grey;
+            letter-spacing: 4px;
+            
+        }
+
+        .bar-item {
+            text-align: center;
+            padding: 14px 16px;
+            float: left;
+            display: block;
+            text-decoration: none;
+            color: black;
+        }
+
+        .button {
+        }
+
+        a:hover:not(.active) {
+            background-color: #A9A9A9;
+        }
+
+        .active {
+            background-color: #4CAF50;
+        }
+
+        .right {
+            float: right;
+        }
+        .con-back{
+            border-color: #f1f1f1 !important;
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+        .image{
+            max-width: 100%;
+            height: auto;
+            -webkit-background-size: cover;
+        }
+        .nazwa{
+            color: grey;
+            letter-spacing: 4px;
+            text-align: center;
+            margin-top: 50%;
+            
+        margin: 10px 0
+        }
+        .centered{
+             position: absolute;
+             top: 50%;
+             left: 50%;
+            transform: translate(-50%, -50%);
+             font-family: "Segoe UI",Arial,sans-serif;
+        font-weight: 400;
         }
     </style>
-
 </head>
+
 <body>
+    <div class=" top-bar">
+        <a href="#home" class="bar-item w3-button"> Pensjonat Agawa</a>
+        <div class="right">
+            <a href="#projects" class="bar-item button">Galeria</a>
+            <a href="#about" class="bar-item button">O nas</a>
+            <a href="#contact" class="bar-item button">Kontakt</a>
+        </div>
+    </div>
+    <header class="con-back" style="max-width:1500px;" id="home">
+        <img class="image" src="statek.jpg" alt="Ocean" width="1500" height="800">
+        <div class="nazwa">
+            <h1><span class="centered">PENSJONAT AGAWA</span></h1>
+       </div>
+    </header>
+
+
+
     
+
+
+
 </body>
 </html>
+
