@@ -1,4 +1,32 @@
-﻿<!DOCTYPE html>
+﻿    <?php
+
+if (isset($_REQUEST['email']))  {
+    $emailTo = "kasia.pietrosiuk@gmail.com";
+
+    $subject = "AGAWA";
+
+    $firstname = $_REQUEST['firstname'];
+
+    $lastname = $_REQUEST['lastname'];
+
+    $content = $_REQUEST['subject'];
+
+    $headers = "From: ".$_REQUEST['email'];
+
+    mail($emailTo, $subject, "Imie: ". $firstname  $content, $headers);
+
+    echo "Success!!!";
+    } else {
+
+    echo "The email could not be sent.";
+
+    }
+
+
+    ?>
+
+
+<!DOCTYPE html>
 <html>
 <title>Pensjonat Agawa</title>
 <meta charset="UTF-8">
@@ -23,6 +51,7 @@
             box-shadow: 10px 10px 5px grey;
             letter-spacing: 4px;
             top: 0;
+            left: 0;
             width: 100%;
         }
 
@@ -65,6 +94,7 @@
         .image {
             max-width: 100%;
             height: auto;
+            right: 0;
         }
 
         * {
@@ -106,8 +136,7 @@
             background-color: #fefefe;
             margin: auto;
             padding: 0;
-            width: 60%;
-            height: 50%;
+            width: 50%;
             max-width: 1200px;
         }
 
@@ -224,7 +253,7 @@
 
         hr {
             display: block;
-            margin-top: 0.5em;
+            margin-top: 2.0em;
             margin-bottom: 2.5em;
             margin-left: 10px;
             margin-right: 10px;
@@ -232,6 +261,7 @@
             border-width: 0.75px;
             opacity: 0.75;
             color: black;
+            position: relative;
         }
 
         h2 {
@@ -240,6 +270,7 @@
             color: dimgray;
             font-weight: 400;
             margin-left: 5%;
+            margin-top: 100px;
         }
 
         .main {
@@ -249,77 +280,111 @@
 
         #sing {
             display: block;
-            background-color: gray;
-            color: black;
+            color: aliceblue;
             letter-spacing: 4px;
             font-weight: 300;
-            font-family: "Segoe UI",Arial,sans-serif;
             text-align: center;
             padding: 16px;
+            bottom: 10px;
         }
 
-        
+        footer {
+            padding: 5px;
+            margin-top: 45px;
+            background-color: dimgray;
+        }
+
+        h3 {
+            font-family: "Segoe UI",Arial,sans-serif;
+            font-weight: 200;
+            color: white;
+        }
+
         input[type=text], select, textarea {
-          width: 100%;
-          padding: 12px;
-          border: 1px solid #ccc;
-          border-radius: 4px;
-          box-sizing: border-box;
-          margin-top: 6px;
-          margin-bottom: 16px;
-          resize: vertical;
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+            font-family: "Segoe UI",Arial,sans-serif;
         }
 
         input[type=submit] {
-          background-color: #4CAF50;
-          color: white;
-          padding: 12px 20px;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
+            background-color: dimgray;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
         }
 
-        input[type=submit]:hover {
-          background-color: #45a049;
+            input[type=submit]:hover {
+                background-color: darkgray;
+            }
+
+        input[type=email] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
         }
 
         .container {
-          padding: 20px;
-          width: 50%;
+            padding: 20px;
+            width: 50%;
         }
-        .inline-contact{
+
+        .inline-contact {
             display: inline-block;
         }
 
-        .map{
+        .map {
             width: 600px;
-            height:400px;
+            height: 400px;
             float: right;
             right: 10px;
+        }
+
+        p {
+            margin-left: 20px;
+            font-weight: 200;
+            color: dimgrey;
+        }
+
+        #fname, #lname, #email, #subject {
+            font-family: "Segoe UI",Arial,sans-serif;
+            letter-spacing: 2px;
         }
     </style>
 </head>
 
 <body>
     <div class="top-bar">
-        <a href="#home" class="bar-item button"> Pensjonat Agawa</a>
+        <a href="#home" class="bar-item"> Pensjonat Agawa</a>
         <div class="right">
-            <a href="#gallery" class="bar-item button">Galeria</a>
-            <a href="#about" class="bar-item button">O nas</a>
-            <a href="#contact" class="bar-item button">Kontakt</a>
+            <a href="#gallery" class="bar-item">Galeria</a>
+            <a href="#about" class="bar-item">O nas</a>
+            <a href="#contact" class="bar-item">Kontakt</a>
         </div>
     </div>
 
 
     <header class="con-back" style="max-width:1500px;" id="home">
         <img class="image" src="statek.jpg" alt="Ocean" width="1500" height="800">
-
+        <p id="gallery"></p>
     </header>
     <div class="main">
 
-      
 
-        <h2 id="gallery">Galeria</h2>
+
+        <h2>Galeria</h2>
 
         <hr>
 
@@ -383,48 +448,63 @@
                     <img class="demo cursor" src="z4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pokój 4">
                 </div>
             </div>
+
+        </div>
+        <p id="about"></p>
+
+
+        <h2>O nas</h2>
+
+        <hr>
+
+        <p>
+            Nasz obiekt zlokalizowany jest w Łebie przy ulicy Teligi. Jest to bardzo ładna, willowa dzielnica miasta Łeby. <br />
+
+            W naszej ofercie posiadamy: <br />
+            <br />
+            1 pokój jednoosobowy<br />
+            13 pokoi 2 osobowych<br />
+            12 pokoi 3 osobowych<br />
+            2 pokoje 4 osobowe<br />
+            Wszystkie pokoje wyposażone są w łazienki i telewizory z kablówką. <br />
+            <br />
+
+            TERMINY POBYTU USTALAMY INDYWIDUALNIE<br />
+        </p>
+        <p id="contact"></p>
+
+        <h2>Kontakt</h2>
+
+        <hr>
+
+
+        <div class="container inline-contact">
+            <form method="post">
+
+                <input type="text" id="fname" name="firstname" placeholder="Imię" autofocus>
+
+
+                <input type="text" id="lname" name="lastname" placeholder="Nazwisko" autofocus>
+
+                <input type="email" id="email" name="email" placeholder="Email" autofocus>
+
+                <textarea id="subject" name="subject" placeholder="Treść" style="height:200px" autofocus></textarea>
+
+                <input type="submit" value="Wyślij">
+            </form>
+        </div>
+
+        <div class="inline-contact">
+            <p style="text-align: right; "> <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.228990961098!2d17.559756115896416!3d54.7583604802991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe7831d12c6b95%3A0x223e5aa1ca0e7057!2sTeligi+30%2C+84-360+%C5%81eba!5e0!3m2!1spl!2spl!4v1558627157433!5m2!1spl!2spl" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
         </div>
 
 
 
-        <h2 id="about">O nas</h2>
+        <footer id="sign">
+            <h3 style="text-align: center; "> Powered by Katarzyna Pietrosiuk</h3>
+        </footer>
 
-        <hr>
-
-        <p>dfbxdljfbnkjedrfnbkrd efkbv</p>
-
-
-        <h2 id="contact">Kontakt</h2>
-
-        <hr>
-
-      
-                <div class="container inline-contact">
-                    <form action="/action_page.php">
-
-                        <input type="text" id="fname" name="firstname" placeholder="Imię">
-
-
-                        <input type="text" id="lname" name="lastname" placeholder="Nazwisko">
-
-
-                        <textarea id="subject" name="subject" placeholder="Treść" style="height:200px"></textarea>
-
-                        <input type="submit" value="Wyślij">
-                    </form>
-                </div>
-       
-           <div class="inline-contact">
-                 <p style="text-align: right; "> <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.228990961098!2d17.559756115896416!3d54.7583604802991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe7831d12c6b95%3A0x223e5aa1ca0e7057!2sTeligi+30%2C+84-360+%C5%81eba!5e0!3m2!1spl!2spl!4v1558627157433!5m2!1spl!2spl" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
-             </div>
-        
     </div>
-
-    <footer id="sign">
-        <p style="text-align: center; "> Powered by Katarzyna Pietrosiuk</p>
-    </footer>
-
-
     <script>
         function openModal() {
             document.getElementById("myModal").style.display = "block";
@@ -463,6 +543,7 @@
             captionText.innerHTML = dots[slideIndex - 1].alt;
         }
     </script>
+
 
 
 </body>
