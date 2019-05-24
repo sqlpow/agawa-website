@@ -1,6 +1,7 @@
 ﻿    <?php
 
 if (isset($_REQUEST['email']))  {
+
     $emailTo = "kasia.pietrosiuk@gmail.com";
 
     $subject = "AGAWA";
@@ -9,13 +10,17 @@ if (isset($_REQUEST['email']))  {
 
     $lastname = $_REQUEST['lastname'];
 
-    $content = $_REQUEST['subject'];
+    $mail = $_REQUEST['subject'];
 
-    $headers = "From: ".$_REQUEST['email'];
+    $content = "Imie:  $firstname  \nNazwisko: $lastname \nTresc: $mail";
 
-    mail($emailTo, $subject, "Imie: ". $firstname  $content, $headers);
+    $headers = "From: ".$_REQUEST['email'] ;
+
+
+    mail($emailTo, $subject, $content, $headers);
 
     echo "Success!!!";
+
     } else {
 
     echo "The email could not be sent.";
@@ -25,14 +30,16 @@ if (isset($_REQUEST['email']))  {
 
     ?>
 
-
 <!DOCTYPE html>
 <html>
 <title>Pensjonat Agawa</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
+
     <style>
+    /* Correct posiotion of map and contact forms  */
+    /*Fix sending mail by refresh side - clear form during refreshing site*/
         html {
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
@@ -366,6 +373,7 @@ if (isset($_REQUEST['email']))  {
 </head>
 
 <body>
+
     <div class="top-bar">
         <a href="#home" class="bar-item"> Pensjonat Agawa</a>
         <div class="right">
