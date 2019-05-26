@@ -1,34 +1,4 @@
-﻿    <?php
-
-if (isset($_REQUEST['email']))  {
-
-    $emailTo = "kasia.pietrosiuk@gmail.com";
-
-    $subject = "AGAWA";
-
-    $firstname = $_REQUEST['firstname'];
-
-    $lastname = $_REQUEST['lastname'];
-
-    $mail = $_REQUEST['subject'];
-
-    $content = "Imie:  $firstname  \nNazwisko: $lastname \nTresc: $mail";
-
-    $headers = "From: ".$_REQUEST['email'] ;
-
-
-    mail($emailTo, $subject, $content, $headers);
-
-    echo "Success!!!";
-
-    } else {
-
-    echo "The email could not be sent.";
-
-    }
-
-
-    ?>
+﻿
 
 <!DOCTYPE html>
 <html>
@@ -39,7 +9,7 @@ if (isset($_REQUEST['email']))  {
 
     <style>
 
-    /*Fix sending mail by refresh side - clear form during refreshing site*/
+        /*Fix sending mail by refresh side - clear form during refreshing site*/
         html {
             -ms-text-size-adjust: 100%;
             -webkit-text-size-adjust: 100%;
@@ -122,17 +92,23 @@ if (isset($_REQUEST['email']))  {
 
         .column {
             float: left;
-            width: 25%;
+            width: 20%;
         }
-        .contact >.element {
+
+        .contact > .element {
             padding: 0 8px;
         }
+
         .contact:after {
             content: "";
             display: table;
             clear: both;
         }
 
+          .column1 {
+            float: left;
+            width: 10%;
+        }
         .element {
             float: left;
             width: 50%;
@@ -226,7 +202,7 @@ if (isset($_REQUEST['email']))  {
         }
 
         img {
-            margin-bottom: -4px;
+            margin-bottom: 11px;
         }
 
         .caption-container {
@@ -273,7 +249,6 @@ if (isset($_REQUEST['email']))  {
         }
 
         hr {
-            
             margin-top: 2.0em;
             margin-bottom: 2.5em;
             margin-left: 10px;
@@ -283,7 +258,6 @@ if (isset($_REQUEST['email']))  {
             opacity: 0.75;
             color: black;
             z-index: -1;
-            
         }
 
         h2 {
@@ -358,14 +332,23 @@ if (isset($_REQUEST['email']))  {
             resize: vertical;
         }
 
-     
+        input[type=tel]{
+             width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+        }
+
 
         .map {
             margin-top: 6px;
             float: right;
             right: 10px;
             display: flex;
-            height: 398px;
+            height: 464px;
         }
 
         p {
@@ -374,7 +357,7 @@ if (isset($_REQUEST['email']))  {
             color: dimgrey;
         }
 
-        #fname, #lname, #email, #subject {
+        #fname, #lname, #email, #subject, #tel {
             font-family: "Segoe UI",Arial,sans-serif;
             letter-spacing: 2px;
         }
@@ -404,9 +387,9 @@ if (isset($_REQUEST['email']))  {
 
 
         <h2>O nas</h2>
-      
-            <hr>
-    
+
+        <hr>
+
 
         <p>
             Nasz obiekt zlokalizowany jest w Łebie przy ulicy Teligi. Jest to bardzo ładna, willowa dzielnica miasta Łeby. <br />
@@ -441,6 +424,28 @@ if (isset($_REQUEST['email']))  {
             <div class="column">
                 <img src="z4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
             </div>
+            <div class="column">
+                <img src="z5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="column">
+                <img src="z6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="z7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="z8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="z9.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="z10.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+            </div>
         </div>
 
         <div id="myModal" class="modal">
@@ -448,23 +453,53 @@ if (isset($_REQUEST['email']))  {
             <div class="modal-content">
 
                 <div class="mySlides">
-                    <div class="numbertext">1 / 4</div>
+                    <div class="numbertext">1 / 10</div>
                     <img src="z1.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">2 / 4</div>
+                    <div class="numbertext">2 / 10</div>
                     <img src="z2.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">3 / 4</div>
+                    <div class="numbertext">3 / 10</div>
                     <img src="z3.jpg" style="width:100%">
                 </div>
 
                 <div class="mySlides">
-                    <div class="numbertext">4 / 4</div>
+                    <div class="numbertext">4 / 10</div>
                     <img src="z4.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">5 / 10</div>
+                    <img src="z5.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">6 / 10</div>
+                    <img src="z6.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">7 / 10</div>
+                    <img src="z7.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">8 / 10</div>
+                    <img src="z8.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">9 / 10</div>
+                    <img src="z7.jpg" style="width:100%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext">10 / 10</div>
+                    <img src="z8.jpg" style="width:100%">
                 </div>
 
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -475,17 +510,35 @@ if (isset($_REQUEST['email']))  {
                 </div>
 
 
-                <div class="column">
+                <div class="column1">
                     <img class="demo cursor" src="z1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pokój 1">
                 </div>
-                <div class="column">
+                <div class="column1">
                     <img class="demo cursor" src="z2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pokój 2">
                 </div>
-                <div class="column">
+                <div class="column1">
                     <img class="demo cursor" src="z3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Pokój 3">
                 </div>
-                <div class="column">
+                <div class="column1">
                     <img class="demo cursor" src="z4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pokój 4">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor" src="z5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Pokój 1">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor" src="z6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Pokój 2">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor" src="z7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Pokój 3">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor" src="z8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Pokój 4">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor" src="z9.jpg" style="width:100%" onclick="currentSlide(9)" alt="Pokój 3">
+                </div>
+                <div class="column1">
+                    <img class="demo cursor" src="z10.jpg" style="width:100%" onclick="currentSlide(10)" alt="Pokój 4">
                 </div>
             </div>
 
@@ -500,16 +553,18 @@ if (isset($_REQUEST['email']))  {
 
         <div class="contact">
             <div class="element">
-                <form method="post">
+                <form method="post" action="send.php">
 
-                    <input type="text" id="fname" name="firstname" placeholder="Imię" autofocus>
+                    <input type="text" id="fname" name="firstname" placeholder="Imię" autofocus required>
 
 
-                    <input type="text" id="lname" name="lastname" placeholder="Nazwisko" autofocus>
+                    <input type="text" id="lname" name="lastname" placeholder="Nazwisko" autofocus required>
 
-                    <input type="email" id="email" name="email" placeholder="Email" autofocus>
+                    <input type="tel" id="tel" name="tel" placeholder="Numer telefonu" pattern="[0-9]{9}" autofocur required>
 
-                    <textarea id="subject" name="subject" placeholder="Treść" style="height:200px" autofocus></textarea>
+                    <input type="email" id="email" name="email" placeholder="Email" autofocus required>
+
+                    <textarea id="subject" name="subject" placeholder="Treść" style="height:200px" autofocus required></textarea>
 
                     <input type="submit" value="Wyślij">
                 </form>
