@@ -38,7 +38,7 @@ if (isset($_REQUEST['email']))  {
 <head>
 
     <style>
-    /* Correct posiotion of map and contact forms  */
+
     /*Fix sending mail by refresh side - clear form during refreshing site*/
         html {
             -ms-text-size-adjust: 100%;
@@ -383,8 +383,8 @@ if (isset($_REQUEST['email']))  {
     <div class="top-bar">
         <a href="#home" class="bar-item"> Pensjonat Agawa</a>
         <div class="right">
-            <a href="#gallery" class="bar-item">Galeria</a>
             <a href="#about" class="bar-item">O nas</a>
+            <a href="#gallery" class="bar-item">Galeria</a>
             <a href="#contact" class="bar-item">Kontakt</a>
         </div>
     </div>
@@ -392,11 +392,33 @@ if (isset($_REQUEST['email']))  {
 
     <header class="con-back" style="max-width:1500px;" id="home">
         <img class="image" src="statek.jpg" alt="Ocean" width="1500" height="800">
-        <p id="gallery"></p>
+        <p id="about"></p>
     </header>
     <div class="main">
 
 
+      
+
+
+        <h2>O nas</h2>
+
+        <hr>
+
+        <p>
+            Nasz obiekt zlokalizowany jest w Łebie przy ulicy Teligi. Jest to bardzo ładna, willowa dzielnica miasta Łeby. <br />
+
+            W naszej ofercie posiadamy: <br />
+            <br />
+            1 pokój jednoosobowy<br />
+            13 pokoi 2 osobowych<br />
+            12 pokoi 3 osobowych<br />
+            2 pokoje 4 osobowe<br />
+            Wszystkie pokoje wyposażone są w łazienki i telewizory z kablówką. <br />
+            <br />
+
+            TERMINY POBYTU USTALAMY INDYWIDUALNIE<br />
+        </p>
+        <p id="gallery"></p>
 
         <h2>Galeria</h2>
 
@@ -464,27 +486,7 @@ if (isset($_REQUEST['email']))  {
             </div>
 
         </div>
-        <p id="about"></p>
 
-
-        <h2>O nas</h2>
-
-        <hr>
-
-        <p>
-            Nasz obiekt zlokalizowany jest w Łebie przy ulicy Teligi. Jest to bardzo ładna, willowa dzielnica miasta Łeby. <br />
-
-            W naszej ofercie posiadamy: <br />
-            <br />
-            1 pokój jednoosobowy<br />
-            13 pokoi 2 osobowych<br />
-            12 pokoi 3 osobowych<br />
-            2 pokoje 4 osobowe<br />
-            Wszystkie pokoje wyposażone są w łazienki i telewizory z kablówką. <br />
-            <br />
-
-            TERMINY POBYTU USTALAMY INDYWIDUALNIE<br />
-        </p>
         <p id="contact"></p>
 
         <h2>Kontakt</h2>
@@ -508,11 +510,11 @@ if (isset($_REQUEST['email']))  {
                     <input type="submit" value="Wyślij">
                 </form>
             </div>
-            
+
             <div class="element">
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.228990961098!2d17.559756115896416!3d54.7583604802991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe7831d12c6b95%3A0x223e5aa1ca0e7057!2sTeligi+30%2C+84-360+%C5%81eba!5e0!3m2!1spl!2spl!4v1558627157433!5m2!1spl!2spl" style=" width:100%;  border:0" frameborder="0"  allowfullscreen></iframe>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.228990961098!2d17.559756115896416!3d54.7583604802991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe7831d12c6b95%3A0x223e5aa1ca0e7057!2sTeligi+30%2C+84-360+%C5%81eba!5e0!3m2!1spl!2spl!4v1558627157433!5m2!1spl!2spl" style=" width:100%;  border:0" frameborder="0" allowfullscreen></iframe>
             </div>
-                
+
         </div>
 
         <footer id="sign">
