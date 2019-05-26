@@ -60,6 +60,7 @@ if (isset($_REQUEST['email']))  {
             top: 0;
             left: 0;
             width: 100%;
+            z-index: 1;
         }
 
             .top-bar a:hover {
@@ -74,6 +75,7 @@ if (isset($_REQUEST['email']))  {
             display: block;
             text-decoration: none;
             color: black;
+            z-index: 1;
         }
 
         .button {
@@ -271,16 +273,17 @@ if (isset($_REQUEST['email']))  {
         }
 
         hr {
-            display: block;
+            
             margin-top: 2.0em;
             margin-bottom: 2.5em;
             margin-left: 10px;
             margin-right: 10px;
-            border-style: inset;
+            border-style: groove;
             border-width: 0.75px;
             opacity: 0.75;
             color: black;
-            position: relative;
+            z-index: -1;
+            
         }
 
         h2 {
@@ -397,12 +400,13 @@ if (isset($_REQUEST['email']))  {
     <div class="main">
 
 
-      
+
 
 
         <h2>O nas</h2>
-
-        <hr>
+      
+            <hr>
+    
 
         <p>
             Nasz obiekt zlokalizowany jest w Łebie przy ulicy Teligi. Jest to bardzo ładna, willowa dzielnica miasta Łeby. <br />
