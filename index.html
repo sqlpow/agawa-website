@@ -122,7 +122,19 @@ if (isset($_REQUEST['email']))  {
             float: left;
             width: 25%;
         }
+        .contact >.element {
+            padding: 0 8px;
+        }
+        .contact:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
+        .element {
+            float: left;
+            width: 50%;
+        }
         /* The Modal (background) */
         .modal {
             display: none;
@@ -343,20 +355,14 @@ if (isset($_REQUEST['email']))  {
             resize: vertical;
         }
 
-        .container {
-            padding: 20px;
-            width: 50%;
-        }
-
-        .inline-contact {
-            display: inline-block;
-        }
+     
 
         .map {
-            width: 600px;
-            height: 400px;
+            margin-top: 6px;
             float: right;
             right: 10px;
+            display: flex;
+            height: 398px;
         }
 
         p {
@@ -486,27 +492,28 @@ if (isset($_REQUEST['email']))  {
         <hr>
 
 
-        <div class="container inline-contact">
-            <form method="post">
+        <div class="contact">
+            <div class="element">
+                <form method="post">
 
-                <input type="text" id="fname" name="firstname" placeholder="Imię" autofocus>
+                    <input type="text" id="fname" name="firstname" placeholder="Imię" autofocus>
 
 
-                <input type="text" id="lname" name="lastname" placeholder="Nazwisko" autofocus>
+                    <input type="text" id="lname" name="lastname" placeholder="Nazwisko" autofocus>
 
-                <input type="email" id="email" name="email" placeholder="Email" autofocus>
+                    <input type="email" id="email" name="email" placeholder="Email" autofocus>
 
-                <textarea id="subject" name="subject" placeholder="Treść" style="height:200px" autofocus></textarea>
+                    <textarea id="subject" name="subject" placeholder="Treść" style="height:200px" autofocus></textarea>
 
-                <input type="submit" value="Wyślij">
-            </form>
+                    <input type="submit" value="Wyślij">
+                </form>
+            </div>
+            
+            <div class="element">
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.228990961098!2d17.559756115896416!3d54.7583604802991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe7831d12c6b95%3A0x223e5aa1ca0e7057!2sTeligi+30%2C+84-360+%C5%81eba!5e0!3m2!1spl!2spl!4v1558627157433!5m2!1spl!2spl" style=" width:100%;  border:0" frameborder="0"  allowfullscreen></iframe>
+            </div>
+                
         </div>
-
-        <div class="inline-contact">
-            <p style="text-align: right; "> <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.228990961098!2d17.559756115896416!3d54.7583604802991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe7831d12c6b95%3A0x223e5aa1ca0e7057!2sTeligi+30%2C+84-360+%C5%81eba!5e0!3m2!1spl!2spl!4v1558627157433!5m2!1spl!2spl" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p>
-        </div>
-
-
 
         <footer id="sign">
             <h3 style="text-align: center; "> Powered by Katarzyna Pietrosiuk</h3>
