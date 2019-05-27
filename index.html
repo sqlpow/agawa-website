@@ -1,626 +1,635 @@
-﻿
+﻿<DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Pokoje gościnne Agawa</title>
 
-<!DOCTYPE html>
-<html>
-<title>Pensjonat Agawa</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Opis zawartości strony dla wyszukiwarek">
+        <meta name="keywords" content="słowa, kluczowe, opisujące, zawartość">
+        <meta name="author" content="Jan Programista">
 
-    <style>
 
-        /*Fix sending mail by refresh side - clear form during refreshing site*/
-        html {
-            -ms-text-size-adjust: 100%;
-            -webkit-text-size-adjust: 100%;
-        }
+        <style>
 
-        body {
-            font-family: "Segoe UI",Arial,sans-serif;
-            margin: 0;
-        }
-
-        .top-bar {
-            background-color: white;
-            overflow: hidden;
-            color: white;
-            position: fixed;
-            box-shadow: 10px 10px 5px grey;
-            letter-spacing: 4px;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1;
-        }
-
-            .top-bar a:hover {
-                background: gray;
-                color: black;
+            html {
+                -ms-text-size-adjust: 100%;
+                -webkit-text-size-adjust: 100%;
             }
 
-        .bar-item {
-            text-align: center;
-            padding: 14px 16px;
-            float: left;
-            display: block;
-            text-decoration: none;
-            color: black;
-            z-index: 1;
-        }
+            body {
+                font-family: "Segoe UI",Arial,sans-serif;
+                margin: 0;
+            }
 
-        .button {
-        }
+            .navbar {
+                background-color: white;
+                overflow: hidden;
+                color: white;
+                position: fixed;
+                box-shadow: 10px 10px 5px grey;
+                letter-spacing: 4px;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1;
+            }
 
-        a:hover:not(.active) {
-            background-color: #A9A9A9;
-        }
+                .navbar a:hover {
+                    background: gray;
+                    color: black;
+                }
 
-        .active {
-            background-color: #4CAF50;
-        }
-
-        .right {
-            float: right;
-        }
-
-        .con-back {
-            border-color: #f1f1f1 !important;
-            position: center;
-            text-align: center;
-            color: white;
-        }
-
-        .image {
-            max-width: 100%;
-            height: auto;
-            right: 0;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .row > .column {
-            padding: 0 8px;
-        }
-
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .column {
-            float: left;
-            width: 20%;
-        }
-
-        .contact > .element {
-            padding: 0 8px;
-        }
-
-        .contact:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-          .column1 {
-            float: left;
-            width: 10%;
-        }
-        .element {
-            float: left;
-            width: 50%;
-        }
-        /* The Modal (background) */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            padding-top: 100px;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: black;
-        }
-
-        /* Modal Content */
-        .modal-content {
-            position: relative;
-            background-color: #fefefe;
-            margin: auto;
-            padding: 0;
-            width: 50%;
-            max-width: 1200px;
-        }
-
-        /* The Close Button */
-        .close {
-            color: white;
-            position: absolute;
-            top: 10px;
-            right: 25px;
-            font-size: 35px;
-            font-weight: bold;
-        }
-
-            .close:hover,
-            .close:focus {
-                color: #999;
+            .bar-item {
+                text-align: center;
+                padding: 10px 10px;
+                float: left;
+                display: block;
                 text-decoration: none;
+                color: black;
+                z-index: 1;
+            }
+
+
+
+
+            a:hover:not(.active) {
+                background-color: #A9A9A9;
+            }
+
+            .active {
+                background-color: #4CAF50;
+            }
+
+            .right {
+                float: right;
+            }
+
+            .con-back {
+                border-color: #f1f1f1 !important;
+                position: center;
+                text-align: center;
+                color: white;
+            }
+
+            .image {
+                max-width: 100%;
+                height: auto;
+                right: 0;
+                margin-top: 35px;
+            }
+
+            * {
+                box-sizing: border-box;
+            }
+
+            .row > .column {
+                padding: 8px 8px;
+            }
+
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .column {
+                float: left;
+                width: 20%;
+            }
+
+            .contact > .element {
+                padding: 0 8px;
+            }
+
+            .contact:after {
+                content: "";
+                display: table;
+                clear: both;
+            }
+
+            .column1 {
+                float: left;
+                width: 10%;
+            }
+
+            .element {
+                float: left;
+                width: 50%;
+            }
+            /* The Modal (background) */
+            .modal {
+                display: none;
+                position: fixed;
+                z-index: 1;
+                padding-top: 100px;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                overflow: auto;
+                background-color: black;
+            }
+
+            /* Modal Content */
+            .modal-content {
+                position: relative;
+                background-color: #fefefe;
+                margin: auto;
+                padding: 0;
+                width: 50%;
+                max-width: 1200px;
+            }
+
+            /* The Close Button */
+            .close {
+                color: white;
+                position: absolute;
+                top: 10px;
+                right: 25px;
+                font-size: 35px;
+                font-weight: bold;
+            }
+
+                .close:hover,
+                .close:focus {
+                    color: #999;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+
+            .mySlides {
+                display: none;
+            }
+
+            .cursor {
                 cursor: pointer;
             }
 
-        .mySlides {
-            display: none;
-        }
-
-        .cursor {
-            cursor: pointer;
-        }
-
-        /* Next & previous buttons */
-        .prev,
-        .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            width: auto;
-            padding: 16px;
-            margin-top: -50px;
-            color: white;
-            font-weight: bold;
-            font-size: 20px;
-            transition: 0.6s ease;
-            border-radius: 0 3px 3px 0;
-            user-select: none;
-            -webkit-user-select: none;
-        }
-
-        /* Position the "next button" to the right */
-        .next {
-            right: 0;
-            border-radius: 3px 0 0 3px;
-        }
-
-            /* On hover, add a black background color with a little bit see-through */
-            .prev:hover,
-            .next:hover {
-                background-color: rgba(0, 0, 0, 0.8);
+            /* Next & previous buttons */
+            .prev,
+            .next {
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                width: auto;
+                padding: 16px;
+                margin-top: -50px;
+                color: white;
+                font-weight: bold;
+                font-size: 20px;
+                transition: 0.6s ease;
+                border-radius: 0 3px 3px 0;
+                user-select: none;
+                -webkit-user-select: none;
             }
 
-        /* Number text (1/3 etc) */
-        .numbertext {
-            color: #f2f2f2;
-            font-size: 12px;
-            padding: 8px 12px;
-            position: absolute;
-            top: 0;
-        }
-
-        img {
-            margin-bottom: 11px;
-        }
-
-        .caption-container {
-            text-align: center;
-            background-color: black;
-            padding: 2px 16px;
-            color: white;
-        }
-
-        .demo {
-            opacity: 0.6;
-        }
-
-            .active,
-            .demo:hover {
-                opacity: 1;
+            /* Position the "next button" to the right */
+            .next {
+                right: 0;
+                border-radius: 3px 0 0 3px;
             }
 
-        img.hover-shadow {
-            transition: 0.3s;
-        }
+                /* On hover, add a black background color with a little bit see-through */
+                .prev:hover,
+                .next:hover {
+                    background-color: rgba(0, 0, 0, 0.8);
+                }
 
-        .hover-shadow:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        }
+            /* Number text (1/3 etc) */
+            .numbertext {
+                color: #f2f2f2;
+                font-size: 12px;
+                padding: 8px 12px;
+                position: absolute;
+                top: 0;
+            }
 
-        .responsive {
-            padding: 0 6px;
-            float: left;
-            width: 24.99999%;
-        }
 
-        @media only screen and (max-width: 700px) {
+            .caption-container {
+                text-align: center;
+                background-color: black;
+                padding: 2px 16px;
+                color: white;
+            }
+
+            .demo {
+                opacity: 0.6;
+            }
+
+                .active,
+                .demo:hover {
+                    opacity: 1;
+                }
+
+            img.hover-shadow {
+                transition: 0.3s;
+            }
+
+            .hover-shadow:hover {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            }
+
             .responsive {
-                width: 49.99999%;
-                margin: 6px 0;
+                padding: 0 6px;
+                float: left;
+                width: 24.99999%;
             }
-        }
 
-        @media only screen and (max-width: 500px) {
-            .responsive {
+            @media only screen and (max-width: 700px) {
+                .responsive {
+                    width: 49.99999%;
+                    margin: 6px 0;
+                }
+            }
+
+            @media only screen and (max-width: 500px) {
+                .responsive {
+                    width: 100%;
+                }
+            }
+
+            hr {
+                margin-top: 2.0em;
+                margin-bottom: 2.5em;
+                margin-left: 10px;
+                margin-right: 10px;
+                border-style: groove;
+                border-width: 0.75px;
+                opacity: 0.75;
+                color: black;
+                z-index: -1;
+            }
+
+            h2 {
+                font-family: "Segoe UI",Arial,sans-serif;
+                letter-spacing: 4px;
+                color: dimgray;
+                font-weight: 400;
+                margin-left: 5%;
+                margin-top: 100px;
+            }
+
+            .main {
+                margin-top: 0px;
+                height: 1500px;
+            }
+
+            #sing {
+                display: block;
+                color: aliceblue;
+                letter-spacing: 4px;
+                font-weight: 300;
+                text-align: center;
+                padding: 16px;
+                bottom: 10px;
+            }
+
+            footer {
+                padding: 5px;
+                margin-top: 45px;
+                background-color: dimgray;
+            }
+
+            h3 {
+                font-family: "Segoe UI",Arial,sans-serif;
+                font-weight: 200;
+                color: white;
+            }
+
+            input[type=text], select, textarea {
                 width: 100%;
-            }
-        }
-
-        hr {
-            margin-top: 2.0em;
-            margin-bottom: 2.5em;
-            margin-left: 10px;
-            margin-right: 10px;
-            border-style: groove;
-            border-width: 0.75px;
-            opacity: 0.75;
-            color: black;
-            z-index: -1;
-        }
-
-        h2 {
-            font-family: "Segoe UI",Arial,sans-serif;
-            letter-spacing: 4px;
-            color: dimgray;
-            font-weight: 400;
-            margin-left: 5%;
-            margin-top: 100px;
-        }
-
-        .main {
-            margin-top: 0px;
-            height: 1500px;
-        }
-
-        #sing {
-            display: block;
-            color: aliceblue;
-            letter-spacing: 4px;
-            font-weight: 300;
-            text-align: center;
-            padding: 16px;
-            bottom: 10px;
-        }
-
-        footer {
-            padding: 5px;
-            margin-top: 45px;
-            background-color: dimgray;
-        }
-
-        h3 {
-            font-family: "Segoe UI",Arial,sans-serif;
-            font-weight: 200;
-            color: white;
-        }
-
-        input[type=text], select, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-            font-family: "Segoe UI",Arial,sans-serif;
-        }
-
-        input[type=submit] {
-            background-color: dimgray;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-            input[type=submit]:hover {
-                background-color: darkgray;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
+                font-family: "Segoe UI",Arial,sans-serif;
             }
 
-        input[type=email] {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-            resize: vertical;
-        }
-
-        input[type=tel]{
-             width: 100%;
-            padding: 12px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-            margin-top: 6px;
-            margin-bottom: 16px;
-        }
-
-
-        .map {
-            margin-top: 6px;
-            float: right;
-            right: 10px;
-            display: flex;
-            height: 464px;
-        }
-
-        p {
-            margin-left: 20px;
-            font-weight: 200;
-            color: dimgrey;
-        }
-
-        #fname, #lname, #email, #subject, #tel {
-            font-family: "Segoe UI",Arial,sans-serif;
-            letter-spacing: 2px;
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="top-bar">
-        <a href="#home" class="bar-item"> Pensjonat Agawa</a>
-        <div class="right">
-            <a href="#about" class="bar-item">O nas</a>
-            <a href="#gallery" class="bar-item">Galeria</a>
-            <a href="#contact" class="bar-item">Kontakt</a>
-        </div>
-    </div>
-
-
-    <header class="con-back" style="max-width:1500px;" id="home">
-        <img class="image" src="statek.jpg" alt="Ocean" width="1500" height="800">
-        <p id="about"></p>
-    </header>
-    <div class="main">
-
-
-
-
-
-        <h2>O nas</h2>
-
-        <hr>
-
-
-        <p>
-            Nasz obiekt zlokalizowany jest w Łebie przy ulicy Teligi. Jest to bardzo ładna, willowa dzielnica miasta Łeby. <br />
-
-            W naszej ofercie posiadamy: <br />
-            <br />
-            1 pokój jednoosobowy<br />
-            13 pokoi 2 osobowych<br />
-            12 pokoi 3 osobowych<br />
-            2 pokoje 4 osobowe<br />
-            Wszystkie pokoje wyposażone są w łazienki i telewizory z kablówką. <br />
-            <br />
-
-            TERMINY POBYTU USTALAMY INDYWIDUALNIE<br />
-        </p>
-        <p id="gallery"></p>
-
-        <h2>Galeria</h2>
-
-        <hr>
-
-        <div class="row">
-            <div class="column">
-                <img src="z1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-            </div>
-            <div class="column">
-                <img src="z2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
-            </div>
-            <div class="column">
-                <img src="z3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-            </div>
-            <div class="column">
-                <img src="z4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-            </div>
-            <div class="column">
-                <img src="z5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="column">
-                <img src="z6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
-            </div>
-            <div class="column">
-                <img src="z7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-            </div>
-            <div class="column">
-                <img src="z8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
-            </div>
-            <div class="column">
-                <img src="z9.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
-            </div>
-            <div class="column">
-                <img src="z10.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
-            </div>
-        </div>
-
-        <div id="myModal" class="modal">
-            <span class="close cursor" onclick="closeModal()">&times;</span>
-            <div class="modal-content">
-
-                <div class="mySlides">
-                    <div class="numbertext">1 / 10</div>
-                    <img src="z1.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">2 / 10</div>
-                    <img src="z2.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">3 / 10</div>
-                    <img src="z3.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">4 / 10</div>
-                    <img src="z4.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">5 / 10</div>
-                    <img src="z5.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">6 / 10</div>
-                    <img src="z6.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">7 / 10</div>
-                    <img src="z7.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">8 / 10</div>
-                    <img src="z8.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">9 / 10</div>
-                    <img src="z7.jpg" style="width:100%">
-                </div>
-
-                <div class="mySlides">
-                    <div class="numbertext">10 / 10</div>
-                    <img src="z8.jpg" style="width:100%">
-                </div>
-
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-                <div class="caption-container">
-                    <p id="caption"></p>
-                </div>
-
-
-                <div class="column1">
-                    <img class="demo cursor" src="z1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pokój 1">
-                </div>
-                <div class="column1">
-                    <img class="demo cursor" src="z2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pokój 2">
-                </div>
-                <div class="column1">
-                    <img class="demo cursor" src="z3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Pokój 3">
-                </div>
-                <div class="column1">
-                    <img class="demo cursor" src="z4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pokój 4">
-                </div>
-                <div class="column1">
-                    <img class="demo cursor" src="z5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Pokój 1">
-                </div>
-                <div class="column1">
-                    <img class="demo cursor" src="z6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Pokój 2">
-                </div>
-                <div class="column1">
-                    <img class="demo cursor" src="z7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Pokój 3">
-                </div>
-                <div class="column1">
-                    <img class="demo cursor" src="z8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Pokój 4">
-                </div>
-                <div class="column1">
-                    <img class="demo cursor" src="z9.jpg" style="width:100%" onclick="currentSlide(9)" alt="Pokój 3">
-                </div>
-                <div class="column1">
-                    <img class="demo cursor" src="z10.jpg" style="width:100%" onclick="currentSlide(10)" alt="Pokój 4">
-                </div>
-            </div>
-
-        </div>
-
-        <p id="contact"></p>
-
-        <h2>Kontakt</h2>
-
-        <hr>
-
-
-        <div class="contact">
-            <div class="element">
-                <form method="post" action="send.php">
-
-                    <input type="text" id="fname" name="firstname" placeholder="Imię" autofocus required>
-
-
-                    <input type="text" id="lname" name="lastname" placeholder="Nazwisko" autofocus required>
-
-                    <input type="tel" id="tel" name="tel" placeholder="Numer telefonu" pattern="[0-9]{9}" autofocur required>
-
-                    <input type="email" id="email" name="email" placeholder="Email" autofocus required>
-
-                    <textarea id="subject" name="subject" placeholder="Treść" style="height:200px" autofocus required></textarea>
-
-                    <input type="submit" value="Wyślij">
-                </form>
-            </div>
-
-            <div class="element">
-                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.228990961098!2d17.559756115896416!3d54.7583604802991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe7831d12c6b95%3A0x223e5aa1ca0e7057!2sTeligi+30%2C+84-360+%C5%81eba!5e0!3m2!1spl!2spl!4v1558627157433!5m2!1spl!2spl" style=" width:100%;  border:0" frameborder="0" allowfullscreen></iframe>
-            </div>
-
-        </div>
-
-        <footer id="sign">
-            <h3 style="text-align: center; "> Powered by Katarzyna Pietrosiuk</h3>
-        </footer>
-
-    </div>
-    <script>
-        function openModal() {
-            document.getElementById("myModal").style.display = "block";
-        }
-
-        function closeModal() {
-            document.getElementById("myModal").style.display = "none";
-        }
-
-        var slideIndex = 1;
-        showSlides(slideIndex);
-
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-        }
-
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
-        }
-
-        function showSlides(n) {
-            var i;
-            var slides = document.getElementsByClassName("mySlides");
-            var dots = document.getElementsByClassName("demo");
-            var captionText = document.getElementById("caption");
-            if (n > slides.length) { slideIndex = 1 }
-            if (n < 1) { slideIndex = slides.length }
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+            input[type=submit] {
+                background-color: dimgray;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
             }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
+
+                input[type=submit]:hover {
+                    background-color: darkgray;
+                }
+
+            input[type=email] {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+                resize: vertical;
             }
-            slides[slideIndex - 1].style.display = "block";
-            dots[slideIndex - 1].className += " active";
-            captionText.innerHTML = dots[slideIndex - 1].alt;
-        }
-    </script>
+
+            input[type=tel] {
+                width: 100%;
+                padding: 12px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                margin-top: 6px;
+                margin-bottom: 16px;
+            }
+
+
+            .map {
+                margin-top: 6px;
+                float: right;
+                right: 10px;
+                display: flex;
+                height: 464px;
+            }
+
+            p {
+                margin-left: 20px;
+                font-weight: 200;
+                color: dimgrey;
+            }
+
+            #fname, #lname, #email, #subject, #tel {
+                font-family: "Segoe UI",Arial,sans-serif;
+                letter-spacing: 2px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="navbar">
+            <a href="#home" class="bar-item"> Pokoje gościnne Agawa</a>
+            <div class="right">
+                <a href="#about" class="bar-item">O nas</a>
+                <a href="#gallery" class="bar-item">Galeria</a>
+                <a href="#contact" class="bar-item">Kontakt</a>
+            </div>
+        </div>
+
+        <div class="main">
+
+            <header class="con-back" id="home">
+                <div class="back">
+                    <img class="image" src="statek.jpg" alt="Ocean">
+                </div>
+                <p id="about"></p>
+            </header>
 
 
 
-</body>
+
+
+
+            <h2>O nas</h2>
+
+            <hr>
+
+
+            <p>
+                Nasz obiekt zlokalizowany jest w Łebie przy ulicy Teligi. Jest to bardzo ładna, willowa dzielnica miasta Łeby. <br />
+                <br />
+                W naszej ofercie posiadamy: <br />
+                <br />
+
+                2 pokoje 2-osobowe<br />
+                4 pokoje 3-osobowe<br />
+                1 pokój 4-osobowe<br />
+                <br />
+                Wszystkie pokoje wyposażone są w łazienki i telewizory. <br />
+                <br />
+
+                Terminy pobytu i ceny ustalamy indywidualnie.<br />
+                <br />
+                Zapraszamy do zapoznania się z galerią i kontaktu poprzez forumularz. <br />
+            </p>
+            <p id="gallery"></p>
+
+            <h2>Galeria</h2>
+
+            <hr>
+
+            <div class="row">
+                <div class="column">
+                    <img src="z1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="z2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="z3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="z4.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="z5.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+                </div>
+            </div>
+
+            <div class="row">
+
+                <div class="column">
+                    <img src="z6.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="z7.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="z8.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="z9.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+                </div>
+                <div class="column">
+                    <img src="z10.jpg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+
+                    <div class="mySlides">
+                        <div class="numbertext">1 / 10</div>
+                        <img src="z1.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">2 / 10</div>
+                        <img src="z2.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">3 / 10</div>
+                        <img src="z3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">4 / 10</div>
+                        <img src="z4.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">5 / 10</div>
+                        <img src="z5.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">6 / 10</div>
+                        <img src="z6.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">7 / 10</div>
+                        <img src="z7.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">8 / 10</div>
+                        <img src="z8.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">9 / 10</div>
+                        <img src="z7.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext">10 / 10</div>
+                        <img src="z8.jpg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+
+                    <div class="column1">
+                        <img class="demo cursor" src="z1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pokój 1">
+                    </div>
+                    <div class="column1">
+                        <img class="demo cursor" src="z2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pokój 2">
+                    </div>
+                    <div class="column1">
+                        <img class="demo cursor" src="z3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Pokój 3">
+                    </div>
+                    <div class="column1">
+                        <img class="demo cursor" src="z4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pokój 4">
+                    </div>
+                    <div class="column1">
+                        <img class="demo cursor" src="z5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Pokój 1">
+                    </div>
+                    <div class="column1">
+                        <img class="demo cursor" src="z6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Pokój 2">
+                    </div>
+                    <div class="column1">
+                        <img class="demo cursor" src="z7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Pokój 3">
+                    </div>
+                    <div class="column1">
+                        <img class="demo cursor" src="z8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Pokój 4">
+                    </div>
+                    <div class="column1">
+                        <img class="demo cursor" src="z9.jpg" style="width:100%" onclick="currentSlide(9)" alt="Pokój 3">
+                    </div>
+                    <div class="column1">
+                        <img class="demo cursor" src="z10.jpg" style="width:100%" onclick="currentSlide(10)" alt="Pokój 4">
+                    </div>
+                </div>
+
+            </div>
+
+            <p id="contact"></p>
+
+            <h2>Kontakt</h2>
+
+            <hr>
+
+
+            <div class="contact">
+                <div class="element">
+                    <form method="post" action="send.php">
+
+                        <input type="text" id="fname" name="firstname" placeholder="Imię"  required>
+
+
+                        <input type="text" id="lname" name="lastname" placeholder="Nazwisko"  required>
+
+                        <input type="tel" id="tel" name="tel" placeholder="Numer telefonu" pattern="[0-9]{9}"  required>
+
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+
+                        <textarea id="subject" name="subject" placeholder="Treść" style="height:200px" required></textarea>
+
+                        <input type="submit" value="Wyślij">
+                    </form>
+                </div>
+
+                <div class="element">
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2302.228990961098!2d17.559756115896416!3d54.7583604802991!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fe7831d12c6b95%3A0x223e5aa1ca0e7057!2sTeligi+30%2C+84-360+%C5%81eba!5e0!3m2!1spl!2spl!4v1558627157433!5m2!1spl!2spl" style=" width:100%;  border:0" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+            <footer id="sign">
+                <h3 style="text-align: center; "> Powered by Katarzyna Pietrosiuk</h3>
+            </footer>
+
+        </div>
+        <script>
+
+
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) { slideIndex = 1 }
+                if (n < 1) { slideIndex = slides.length }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+        </script>
+
+
+
+    </body>
 </html>
