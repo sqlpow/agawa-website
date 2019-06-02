@@ -2,7 +2,7 @@
 
 if (isset($_REQUEST['email']))  {
 
-    $emailTo = "kasia.pietrosiuk@gmail.com";
+    $emailTo = "agawaleba@gmail.com";
 
     $subject = "AGAWA";
 
@@ -10,7 +10,7 @@ if (isset($_REQUEST['email']))  {
 
     $lastname = $_REQUEST['lastname'];
 
-    $mail = $_REQUEST['subject'];
+    $mail = $_REQUEST['content'];
 
     $content = "Imie:  $firstname  \nNazwisko: $lastname \nTresc: $mail";
 
@@ -19,7 +19,7 @@ if (isset($_REQUEST['email']))  {
 
     mail($emailTo, $subject, $content, $headers);
 
-     header('Location: ' . $_SERVER['REQUEST_URI']);
+     header('Location: index.php');
     exit;
 
     } else {
