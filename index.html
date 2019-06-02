@@ -5,9 +5,9 @@
         <title>Pokoje gościnne Agawa</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Opis zawartości strony dla wyszukiwarek">
-        <meta name="keywords" content="słowa, kluczowe, opisujące, zawartość">
-        <meta name="author" content="Jan Programista">
+        <meta name="description" content="Pokoje gościnne Agawa w Łebie.">
+        <meta name="keywords" content="pokoje gościnne agawa nocleg leba łeba hotel pensjonat willa wakacje kwatery">
+        <meta name="author" content="Katarzyna Pietrosiuk">
 
 
         <style>
@@ -27,7 +27,7 @@
                 overflow: hidden;
                 color: white;
                 position: fixed;
-                box-shadow: 10px 10px 5px grey;
+                box-shadow: 0px 5px 5px #d2d2d2;
                 letter-spacing: 4px;
                 top: 0;
                 left: 0;
@@ -49,9 +49,6 @@
                 color: black;
                 z-index: 1;
             }
-
-
-
 
             a:hover:not(.active) {
                 background-color: #A9A9A9;
@@ -98,15 +95,16 @@
                 width: 20%;
             }
 
-            .contact > .element {
-                padding: 0 8px;
+            .contact {
+                display: -ms-flexbox; /* IE10 */
+                display: flex;
+                -ms-flex-wrap: wrap; /* IE10 */
+                flex-wrap: wrap;
             }
 
-            .contact:after {
-                content: "";
-                display: table;
-                clear: both;
-            }
+                .contact > .element {
+                    padding: 0 8px;
+                }
 
             .column1 {
                 float: left;
@@ -114,8 +112,8 @@
             }
 
             .element {
-                float: left;
-                width: 50%;
+                -ms-flex: 50%; /* IE10 */
+                flex: 50%;
             }
             /* The Modal (background) */
             .modal {
@@ -184,13 +182,11 @@
                 -webkit-user-select: none;
             }
 
-            /* Position the "next button" to the right */
             .next {
                 right: 0;
                 border-radius: 3px 0 0 3px;
             }
 
-                /* On hover, add a black background color with a little bit see-through */
                 .prev:hover,
                 .next:hover {
                     background-color: rgba(0, 0, 0, 0.8);
@@ -204,7 +200,6 @@
                 position: absolute;
                 top: 0;
             }
-
 
             .caption-container {
                 text-align: center;
@@ -275,7 +270,7 @@
                 height: 1500px;
             }
 
-            #sing {
+            #sign {
                 display: block;
                 color: aliceblue;
                 letter-spacing: 4px;
@@ -318,9 +313,9 @@
                 cursor: pointer;
             }
 
-                input[type=submit]:hover {
-                    background-color: darkgray;
-                }
+            input[type=submit]:hover {
+                background-color: darkgray;
+            }
 
             input[type=email] {
                 width: 100%;
@@ -343,7 +338,6 @@
                 margin-bottom: 16px;
             }
 
-
             .map {
                 margin-top: 6px;
                 float: right;
@@ -358,9 +352,15 @@
                 color: dimgrey;
             }
 
-            #fname, #lname, #email, #subject, #tel {
+            #fname, #lname, #email, #content, #tel {
                 font-family: "Segoe UI",Arial,sans-serif;
                 letter-spacing: 2px;
+            }
+
+            @media screen and (max-width: 700px) {
+                .contact {
+                    flex-direction: column;
+                }
             }
         </style>
     </head>
@@ -386,29 +386,29 @@
             </header>
 
 
-
-
-
-
             <h2>O nas</h2>
 
             <hr>
 
 
             <p>
-                Nasz obiekt zlokalizowany jest w Łebie przy ulicy Teligi. Jest to bardzo ładna, willowa dzielnica miasta Łeby. <br />
+                Nasz obiekt zlokalizowany jest w Łebie przy ulicy Teligi. Jest to bardzo ładna i spokojna, willowa dzielnica miasta. <br />
+                Odległość obiektu od centrum wynosi ok. 200m, a do plaży ok. 800m. <br />
+
                 <br />
                 W naszej ofercie posiadamy: <br />
                 <br />
 
-                2 pokoje 2-osobowe<br />
-                4 pokoje 3-osobowe<br />
-                1 pokój 4-osobowe<br />
+                2 pokoje 2-osobowe,<br />
+                4 pokoje 3-osobowe,<br />
+                1 pokój 4-osobowe.<br />
                 <br />
-                Wszystkie pokoje wyposażone są w łazienki i telewizory. <br />
+                Wszystkie pokoje wyposażone są w łazienki, telewizory, czajniki elektryczne i drobne naczynia. <br />
+                <br />
+                Na piętrze znajduje się lodówka, mikrofalówka oraz żelazko do dyspozycji wszystkich gości.
                 <br />
 
-                Terminy pobytu i ceny ustalamy indywidualnie.<br />
+                Obiekt jest otwarty w lipcu i sierpniu. Terminy pobytu i ceny ustalamy indywidualnie.<br />
                 <br />
                 Zapraszamy do zapoznania się z galerią i kontaktu poprzez forumularz. <br />
             </p>
@@ -518,34 +518,34 @@
 
 
                     <div class="column1">
-                        <img class="demo cursor" src="z1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Pokój 1">
+                        <img class="demo cursor" src="z1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Zdjęcie 1">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="z2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Pokój 2">
+                        <img class="demo cursor" src="z2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Zdjęcie 2">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="z3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Pokój 3">
+                        <img class="demo cursor" src="z3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Zdjęcie 3">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="z4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Pokój 4">
+                        <img class="demo cursor" src="z4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Zdjęcie 4">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="z5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Pokój 1">
+                        <img class="demo cursor" src="z5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Zdjęcie 5">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="z6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Pokój 2">
+                        <img class="demo cursor" src="z6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Zdjęcie 6">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="z7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Pokój 3">
+                        <img class="demo cursor" src="z7.jpg" style="width:100%" onclick="currentSlide(7)" alt="Zdjęcie 7">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="z8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Pokój 4">
+                        <img class="demo cursor" src="z8.jpg" style="width:100%" onclick="currentSlide(8)" alt="Zdjęcie 8">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="z9.jpg" style="width:100%" onclick="currentSlide(9)" alt="Pokój 3">
+                        <img class="demo cursor" src="z9.jpg" style="width:100%" onclick="currentSlide(9)" alt="Zdjęcie 9">
                     </div>
                     <div class="column1">
-                        <img class="demo cursor" src="z10.jpg" style="width:100%" onclick="currentSlide(10)" alt="Pokój 4">
+                        <img class="demo cursor" src="z10.jpg" style="width:100%" onclick="currentSlide(10)" alt="Zdjęcie 10">
                     </div>
                 </div>
 
@@ -562,16 +562,16 @@
                 <div class="element">
                     <form method="post" action="send.php">
 
-                        <input type="text" id="fname" name="firstname" placeholder="Imię"  required>
+                        <input type="text" id="fname" name="firstname" placeholder="Imię" required>
 
 
-                        <input type="text" id="lname" name="lastname" placeholder="Nazwisko"  required>
+                        <input type="text" id="lname" name="lastname" placeholder="Nazwisko" required>
 
-                        <input type="tel" id="tel" name="tel" placeholder="Numer telefonu" pattern="[0-9]{9}"  required>
+                        <input type="tel" id="tel" name="tel" placeholder="Numer telefonu" pattern="[0-9]{9}" required>
 
                         <input type="email" id="email" name="email" placeholder="Email" required>
 
-                        <textarea id="subject" name="subject" placeholder="Treść" style="height:200px" required></textarea>
+                        <textarea id="content" name="content" placeholder="Treść" style="height:200px" required></textarea>
 
                         <input type="submit" value="Wyślij">
                     </form>
@@ -584,7 +584,7 @@
             </div>
 
             <footer id="sign">
-                <h3 style="text-align: center; "> Powered by Katarzyna Pietrosiuk</h3>
+                <h3 style="text-align: center; "> Created by Katarzyna Pietrosiuk</h3>
             </footer>
 
         </div>
