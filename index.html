@@ -9,7 +9,11 @@
         <meta name="keywords" content="pokoje gościnne agawa nocleg leba łeba hotel pensjonat willa wakacje kwatery">
         <meta name="author" content="Katarzyna Pietrosiuk">
 
+           <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
+  
+    
         <style>
 
             html {
@@ -68,6 +72,28 @@
                 text-align: center;
                 color: white;
             }
+            .masthead {
+                height: 100vh;
+                min-height: 500px;
+                background-image: url('tlo.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                }
+
+                .font-weight-light,
+                .lead {
+                    color:gray;
+                    font-weight: 400;
+                    text-align: center;
+                    position: relative;
+                    vertical-align: middle;
+                    top: 350px;
+                    border: black solid 2px;
+                    background-color: white;
+
+                }
+
 
             .image {
                 max-width: 100%;
@@ -362,6 +388,9 @@
                     flex-direction: column;
                 }
             }
+
+          
+           
         </style>
     </head>
 
@@ -376,14 +405,21 @@
             </div>
         </div>
 
+    <header class="masthead">
+            <div class="container h-100">
+                    <div class="row h-100 align-items-center">
+                      <div class="col-12 text-center">
+                        <h1 class="font-weight-light">POKOJE GOŚCINNE AGAWA</h1>
+                        <p class="lead"></p>
+                      </div>
+                    </div>
+                  </div>
+    </header>
+            
+    <p id="about"></p>
         <div class="main">
-
-            <header class="con-back" id="home">
-                <div class="back">
-                    <img class="image" src="statek.jpg" alt="Ocean">
-                </div>
-                <p id="about"></p>
-            </header>
+                
+           
 
 
             <h2>O nas</h2>
@@ -584,11 +620,16 @@
             </div>
 
             <footer id="sign">
-                <h3 style="text-align: center; "> Created by Katarzyna Pietrosiuk</h3>
+                <h3 style="text-align: center; "> Copyright &copy; Katarzyna Pietrosiuk 2019</h3>
             </footer>
 
         </div>
-        <script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+        <script src="https://vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="https://https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></script>
+       
+       <script>
 
 
             function openModal() {
